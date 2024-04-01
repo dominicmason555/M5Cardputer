@@ -20,6 +20,8 @@ void espnow_wrap_init();
 
 int espnow_wrap_send(uint8_t* message, size_t size);
 
+int espnow_single_send(uint8_t* message, size_t size);
+
 int espnow_wrap_available();
 
 uint8_t* espnow_wrap_get_received();

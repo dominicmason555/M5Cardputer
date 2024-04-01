@@ -109,8 +109,9 @@ extern "C" void app_main(void)
     mooncake.installApp(launcher);
 
     // Install apps 
-    mooncake.installApp(new APPS::AppWifiScan_Packer);
     mooncake.installApp(new APPS::AppRecord_Packer);
+    mooncake.installApp(new APPS::AppDomson_Packer);
+    mooncake.installApp(new APPS::AppWifiScan_Packer);
     mooncake.installApp(new APPS::AppChat_Packer);
     mooncake.installApp(new APPS::AppIR_Packer);
     mooncake.installApp(new APPS::AppREPL_Packer);

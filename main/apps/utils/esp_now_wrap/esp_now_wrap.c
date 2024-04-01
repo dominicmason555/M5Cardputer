@@ -156,6 +156,23 @@ void espnow_wrap_init()
     _is_inited = 1;
 }
 
+int espnow_single_send(uint8_t* message, size_t size)
+{
+    esp_err_t ret  = ESP_OK;
+
+    espnow_frame_head_t frame_head = {
+        .retransmit_count = 1,
+        .broadcast        = true,
+    };
+
+    ret = espnow_send(ESPNOW_DATA_TYPE_DATA, ESPNOW_ADDR_BROADCAST, message, size, &frame_head, portMAX_DELAY);
+    if (ret != ESP_OK)
+        ESP_LOGE(TAG, "shit happened : %d", ret);
+    else 
+        ESP_LOGI(TAG, "espnow_send ok, size: %u, data: %s", size, message);
+
+    return ret;
+}
 
 int espnow_wrap_send(uint8_t* message, size_t size)
 {

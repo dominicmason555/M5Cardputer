@@ -20,3 +20,4 @@
 #include "app_keyboard/app_keyboard.h"
 #include "app_texteditor/app_texteditor.h"
 #include "app_hello/app_hello.h"
+#include "app_domson/app_domson.h"

@@ -58,7 +58,8 @@ void Launcher::_update_system_bar()
         // Time
         _data.hal->canvas_system_bar()->setTextColor(THEME_COLOR_SYSTEM_BAR_TEXT);
         _data.hal->canvas_system_bar()->drawCenterString(
-            _data.system_state.time.c_str(), 
+            //_data.system_state.time.c_str(), 
+            "Domson",
             _data.hal->canvas_system_bar()->width() / 2,
             _data.hal->canvas_system_bar()->height() / 2 - FONT_HEIGHT / 2
         );
